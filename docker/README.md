@@ -62,3 +62,16 @@ Buscar todas as imagens que começam uma palavra:
 ```zsh
 docker images | grep laravel  
 ```
+
+Nginx
+```
+docker network create laranet
+```
+
+```
+docker run -d --network laranet --name laravel rodolfosouzamenezes/laravel:prod 
+```
+
+```
+docker run -d --network laranet --name nginx-laravel -p 8080:80 rodolfosouzamenezes/nginx-docker:prod
+```
