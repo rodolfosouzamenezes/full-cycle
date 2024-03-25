@@ -9,6 +9,9 @@ __Macvlan:__ permite que os conteiners possuam seus próprios endereços MAC e I
 
 __None:__ o contêiner não possui conectividade externa
 
+## Multi-stage Build
+Um "multi-stage build" no Docker refere-se a uma prática em que você utiliza várias imagens Docker em um único Dockerfile para otimizar o tamanho da sua imagem final. Essa abordagem é útil para reduzir o tamanho das imagens Docker eliminando elementos desnecessários e mantendo apenas o necessário para executar a aplicação.
+
 ## Diferença entre ENTRYPOINT e CMD
 ENTRYPOINT é um comando fixo, que sempre será rodado, já o CMD pode ser sobrescrito
 ```Dockerfile
@@ -48,4 +51,14 @@ docker rm $(docker ps -a -q) -f
 Rodar docker com um volume, assim podemos ter uma percistência de dados
 ```zsh
 docker run --rm -it -v $(pwd)/:/usr/src/app -p 3000:3000 node:15 bash
+```
+
+Selecionando um Docker file expecifico
+```zsh
+docker build -t rodolfosouzamenezes/laravel:prod -f Dockerfile.prod
+```
+
+Buscar todas as imagens que começam uma palavra:
+```zsh
+docker images | grep laravel  
 ```
