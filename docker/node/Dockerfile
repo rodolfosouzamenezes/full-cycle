@@ -1,4 +1,5 @@
 FROM node:15
+FROM ubuntu:bionic
 
 WORKDIR /usr/src/app
 
