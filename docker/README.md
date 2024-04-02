@@ -26,6 +26,17 @@ docker run imagem-qualquer CMD SOBRESCRITO
 Assim será exibido:
 `COMANDO FIXO CMD SOBRESCRITO`
 
+
+## Dependêcias entre containers
+Em casos onde um container depênde do outro para rodar é recomandado usar o dockerize no entripoint do seu projeto, onde ele vai verificar se o outro container está no ar, se estiver, irá executar o entrypoint real do seu projeto:
+
+```Dockerfile 
+entrypoint: dockerize -wait tcp://db:3306 -timeout 20s docker-entrypoint.sh
+```
+temos outras alternativas ao dockerize:
+- wait-for-it: https://github.com/codeedu/docker-wait-for-it 
+- healthcheck: https://github.com/devfullcycle/docker-healthcheck
+
 ## COMANDOS
 
 Buildar o container
