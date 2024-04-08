@@ -1,7 +1,5 @@
-Ao executar o comando abaixo, o resultado será "Full Cycle Rocks!!". Consegui manter a imagem do projeto abaixo de 2MB, conforme o desafio
+##  1. Desafio GO
+- Publicar uma imagem no docker hub
+- Quando executar a imagem terá o seguinte resultado: `Full Cycle Rocks!!`
+- A imagem ter menos de 2MB
 
-```
-docker run rodolfosouzamenezes/go-docker
-```
-
-Aqui está o link da minha imagem no docker hub: [rodolfosouzamenezes/go-docker](https://hub.docker.com/r/rodolfosouzamenezes/go-docker)
