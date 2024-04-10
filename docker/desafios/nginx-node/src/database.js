@@ -7,9 +7,9 @@ const config = {
   database: 'nodedb',
 }
 
-const executeQuery = (query) => {
+const executeQuery = (query, callback) => {
   const connection = mysql.createConnection(config)
-  connection.query(query)
+  connection.query(query, callback)
   connection.end()
 }
 
@@ -34,16 +34,14 @@ const add = (name) => {
 
 const getAll = async () => {
   const getAllQuery = `SELECT * FROM people`;
-  const connection = mysql.createConnection(config);
 
   const people = await new Promise((resolve, reject) => {
-    connection.query(getAllQuery, (err, res) => {
+    executeQuery(getAllQuery, (err, res) => {
       if (err) reject(err);
       resolve(res);
     });
   });
   
-  connection.end();
   return people;
 }
 
