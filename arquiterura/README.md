@@ -30,3 +30,13 @@
 - Planejamento de grandes implantações
   - Sitemas "core"
   - Migrações
+
+## Pepel do Arquiteto de Software
+- Transforma requisitos de negócio em padrões arquiteturais
+- Orquestra desenvolvedores e experts de domínio
+- Entender de forma profunda conceitos e modelos arquiteturais
+- Auxilia na tomada de decisão nos momentos de crise
+- Reforça boas práticas de desenvolvimento
+- Code reviews
+- Algumas empresas não pussuiem a um cargo de Arquiteto de Software, mas possuem proficionais que acabam realizando esse papel com base nas suas experiências anteriores, normalmente são proficionais mais experientes como Desenvolvedores Seniors e Tech Leads
+- Há empresas que apesar de não possuírem o cargo de Arquiteto de Software, possuem um departamento de arquitetura que auxilia os times com questões arquiteturais
