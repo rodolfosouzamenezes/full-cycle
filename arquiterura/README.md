@@ -48,3 +48,6 @@
 - Entender de padrões de projeto e boas práticas
 - Maior clareza do impacto do software 
 - Tomar decisões com maior confiança
+
+## Arquitetura (Escopo Global) vs Design (Escopo Local)
+`"Atividades relacionadas a arquitetura de software são sempre de design. Entretanto, nem toda atividade de design são sobre arquitetura. O objetivo primário da arquitetura de software é garantir que os atributos de qualidade, restrições de alto nível e os objetivos do negócio, sejam atendidos pelo sistema. Qualquer desisão de design que não tenha relação com este objetivo não é arquitetural. Todas as desisões de design para um componente que não sejam "visíveis" fora dele, geralmente, também não são." (Elemar Jr.)`
