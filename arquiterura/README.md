@@ -59,3 +59,9 @@
 - Acompanhar a evolução do negócio
 - Quanto mais tempo o software ficar no ar, mais retorno ele gera
 - A solução precisa ser arquitetada 
+
+## Pilares da Arquitetura de Software
+- Estruturação
+- Componentização
+- Relacionamento entre sistemas
+- Governança
