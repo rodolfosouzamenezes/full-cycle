@@ -40,3 +40,11 @@
 - Code reviews
 - Algumas empresas não pussuiem a um cargo de Arquiteto de Software, mas possuem proficionais que acabam realizando esse papel com base nas suas experiências anteriores, normalmente são proficionais mais experientes como Desenvolvedores Seniors e Tech Leads
 - Há empresas que apesar de não possuírem o cargo de Arquiteto de Software, possuem um departamento de arquitetura que auxilia os times com questões arquiteturais
+
+## Vantagens de entender sobre arquitetura
+- Poder navegar entre uma visão macro para micro de um ou mais softwares
+- Entender as diversas opções para desenvolver a mesma coisa, e escolher a melhor dentre elas para esse contexto
+- Pensar no projeto a longo prazo e de maneira sustentável
+- Entender de padrões de projeto e boas práticas
+- Maior clareza do impacto do software 
+- Tomar decisões com maior confiança
