@@ -65,3 +65,12 @@
 - Componentização
 - Relacionamento entre sistemas
 - Governança
+
+## Requisitos Arquiteturais (RAs)
+- Performance
+- Armazenamento de dados
+- Escalabilidade
+- Segurança
+- Legal
+- Audit
+- Marketing
