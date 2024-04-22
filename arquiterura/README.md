@@ -74,3 +74,32 @@
 - Legal
 - Audit
 - Marketing
+
+## Características Arquiteturais
+### Operacionais
+- Disponibilidade
+- Recuperação de desastres
+- Performance
+- Recuperação (backup)
+- Confiabilidade e segurança
+- Robustez
+- Escalabilidade
+
+### Estruturais
+- Configurável
+- Extensibilidade
+- Fácil instalação
+- Reuso de componentes
+- Internacionalização
+- Fácil manutenção
+- Portabilidade
+- Fácil suporte (logs, debugging)
+
+### Cross-Cutting
+- Acessibilidade
+- Processo de retenção e recuperação de dados
+- Autenticação e Autorização
+- Legal
+- Privacidade
+- Segurança
+- Usabilidade
