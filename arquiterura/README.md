@@ -103,3 +103,18 @@
 - Privacidade
 - Segurança
 - Usabilidade
+
+## Perspectivas para arquitetar software de qualidade
+### Performance
+- É o desempenho que um software possui para completar um determinado workload
+- Um software performático é diferente de um software escalável
+- Métricas para medira a performance
+  - Latência ou "response time" (Diminuir)
+    - Normalmente medida em milliseconds
+    - É afetada pelo tempo de processamento da aplicação, rede e chamadas externas
+  - Throughput (Aumentar)
+    - Quantidade de requisições
+    - Diretamente ligado a latência
+
+### Escalabilidade
+### Resiliência
