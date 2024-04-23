@@ -127,10 +127,6 @@
   - Bancos de dados (tipo de bancos, schema)
   - Caching
 
-- Capacidade computacional
-  - Escala vertical: Recursos computacionais
-  - Escala horizontal: Quantidade de máquinas
-
 - Diferença entre concorrência e paralelismo <br>
 `"Concorrência é sobre lidar com muitas coisas ao mesmo tempo. Paralelismo é fazer muitas coisas ao mesmo tempo." (Rob Pike)`
 
@@ -170,4 +166,13 @@
     - Akamai
 
 ### Escalabilidade
+`"Ecalabilidade é a capacidade de sisitemas suportarem o aumento (ou a redução) dos workloads incrementando (ou reduzindo) o custo em menos ou igual proporção." (Elemar Jr.)`
+
+- Escalabilidade x Performance <br>
+  A Performance tem o foco em reduzir a latência e aumentar o throughtput, já a escalabilidade visa termos a possibilidade de aumentar ou diminuir o throughput adicionando ou removendo a capacidade computacional
+
+- Capacidade computacional
+  - Escala vertical: Recursos computacionais
+  - Escala horizontal: Quantidade de máquinas
+
 ### Resiliência
