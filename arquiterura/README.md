@@ -142,6 +142,32 @@
   - Usará 5 threads
   - Irá atender todos em 10s, pois irá atende-los em paralelo
 
+- Uso de Caching
+  - Dados estáticos
+  - Páginas web
+  - Funções internas 
+    - Evita reprocessamento de algoritmos pesados
+    - Acesso ao banco de dados
+  - Cache Exclusivo
+    - Baixa latência
+    - Duplicado entre nós
+    - Problemas relacionados a sessões
+  - Cache Compartilhado
+    - Maior latência
+    - Não há duplicação
+    - Sessões compartilhadas
+    - Banco de dados externo
+      - Redis
+      - Memcache
+      - MySQL
+  - Edge computing (Cache na Borda)
+    - Cache realizado mais próximo ao usuário
+    - Evita a requisição chegar até o Cloud Provider / Infra
+    - Normalmente arquivos estáticos
+    - CDN - Content Delivery Network
+    - Cloudflare workers
+    - Vercel
+    - Akamai
 
 ### Escalabilidade
 ### Resiliência
