@@ -115,6 +115,19 @@
   - Throughput (Aumentar)
     - Quantidade de requisições
     - Diretamente ligado a latência
+- Principais razões ocasionam em baixa performance
+  - Processamento ineficiente
+  - Recursos computacionais limitados
+  - Trabalhar de forma bloqueante
+  - Acesso serial a recursos
+- Principais formas para aumentar a eficiência
+  - Escala da capacidade computacional (CPU, Disco, Memória, Rede)
+  - Lógica por trás do software (Algoritmos, queries, overhead de frameworks)
+  - Concorrência e paralelismo
+  - Bancos de dados (tipo de bancos, schema)
+  - Caching
+
+
 
 ### Escalabilidade
 ### Resiliência
