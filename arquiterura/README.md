@@ -127,6 +127,20 @@
   - Bancos de dados (tipo de bancos, schema)
   - Caching
 
+- Capacidade computacional
+  - Escala vertical: Recursos computacionais
+  - Escala horizontal: Quantidade de máquinas
+
+- Diferença entre concorrência e paralelismo <br>
+`"Concorrência é sobre lidar com muitas coisas ao mesmo tempo. Paralelismo é fazer muitas coisas ao mesmo tempo." (Rob Pike)`
+
+- Trabalhando de forma serial - único processo
+  - Atendendo 5 requests de 10s
+  - Irá atender todos com 50s
+- Trabalhando de forma paralela/concorrente
+  - Atendendo 5 requests
+  - Usará 5 threads
+  - Irá atender todos em 10s, pois irá atende-los em paralelo
 
 
 ### Escalabilidade
