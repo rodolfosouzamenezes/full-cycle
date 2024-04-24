@@ -184,4 +184,17 @@
   - Sessões centralizadas
   - `Tudo pode ser destruído e criado facilmente`
 
+- Escala de Banco de Dados
+  - Aumento de recursos computacionais
+  - Distribuindo responsabilidades: criar banco de dados especificos para escrita/leitura <br>
+    Toda vez que escrever algo será inserido na réplica, e caso tenha que fazer a leitura de algum dado, buscarei na réplica
+  - Shards de forma horizontal
+  - Serverless
+  - Otimização de queries e índices
+    - Tabalhe com índices de forma consistente
+    - Sistema de APM (Application Performance Monitoring)
+    - Explain nas queries
+    - CQRS (Command Query Responsability Segregation): separa escrita e leitura
+
+
 ### Resiliência
