@@ -196,5 +196,11 @@
     - Explain nas queries
     - CQRS (Command Query Responsability Segregation): separa escrita e leitura
 
+- Proxy reverso
+  - É um servidor que fica na frente dos servidores web e encaminha as solicitações do cliente (por exemplo, navegador web) para esses servidores web
+  - Soluções populares
+    - Nginx
+    - HAProxy (HA = High Availability)
+    - Traefik
 
 ### Resiliência
