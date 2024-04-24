@@ -1,11 +1,11 @@
 # Fundamentos da arquitetura de software
 ## Tipo de arquiteturas
 ### Arquitetura de Software
-- "É a organização fundamental de um sistema e seus componentes, suas relações, seu ambiente, bem como os pricípio que guiam seu design e evolução." (IEEE Standard 1471)
+`"É a organização fundamental de um sistema e seus componentes, suas relações, seu ambiente, bem como os pricípio que guiam seu design e evolução." (IEEE Standard 1471)`
 - O processo de arquiterar um software estabelece que o que está sendo desenvolvido faça parte de um conjunto maior
 - Diretamente ligada ao desenvolvimento de software
 - Afeta diretamente a estrutura organizacional da empresa
-- "Organizações que desenvolvem sistemas de software tendem a produzir sistemas que são cópia das estruturas de comunicação dessas empresas." (Melvin Conway)
+`"Organizações que desenvolvem sistemas de software tendem a produzir sistemas que são cópia das estruturas de comunicação dessas empresas." (Melvin Conway)`
 
 ### Arquitetura de Solução
 - Fica entre a área de negócios e  software
@@ -171,8 +171,17 @@
 - Escalabilidade x Performance <br>
   A Performance tem o foco em reduzir a latência e aumentar o throughtput, já a escalabilidade visa termos a possibilidade de aumentar ou diminuir o throughput adicionando ou removendo a capacidade computacional
 
-- Capacidade computacional
-  - Escala vertical: Recursos computacionais
-  - Escala horizontal: Quantidade de máquinas
+- Escala vertical: Recursos computacionais
+- Escala horizontal: Quantidade de máquinas
+- É _imposivel escalar verticalmente para sempre_, pois em algum momento irá atingir o limite computacional daquela máquina. <br>
+  Por isso é _mais comum escalar horizontalmente_.
+
+- Descentralização <br>
+  Quando vamos escalar o software horizontalmente é necessário descentraliza-lo, para que as máquinas sejam descartáveis.
+  - Disco efêmero
+  - Servidor de aplicação x Servidor de assets
+  - Cache centralizado
+  - Sessões centralizadas
+  - `Tudo pode ser destruído e criado facilmente`
 
 ### Resiliência
