@@ -208,32 +208,45 @@ Resiliência é o conjunto de estratégias adotadas intencionalmente para a _ada
 
 - Minimizar os riscos de perda de dados e transações para o negócio
 - Proteger e ser protegido
-  - Um sistema em uma arquitetura distribuída precisa adotar mecanismos de autopreservação para garantir ao máximo sua operação com qualidade
-  - Um sistema não pode ser "egoísta" ao ponto de realizar mais requisições em um sistema que está falhando
-  - Um sistema lento no ar muitas vezes é pior que um sistema fora do ar (Efeito dominó)
-  - Health Check
-    - Sem sinais vitais, não é possível saber a "saúde" de um sistema
-    - Um sistema qua não está saudável possui uma chance de se recuperar caso o tráfego pare de ser direcionado a ele temporariamente
-    - Caso eu tenha ciência que o sistema não está "saudável", com base no health check, posso criar estratégias para evitar mandar requisições para aquele sistema, para que ele consiga ter um self healing 
-    - Health check de qualidade
-      - Retorna a média do tempo das últimas requisições
-      - Faz alguma consulta no banco
-  - Rate Limiting
-    - Protege o sistema com base no que ele foi projetado para suportar
-      - Se o sistema aguenta 100 RPS, se passar desse valor ele irá retornar um status 500
-    - Referência programada por tipo de client
-      - Colocar um limite de RPS por cliente
-  - Circuit Breaker
-    - Protege o sistema fazendo com que as requisições feitas para ele sejam negadas
-    - Status
-      - Circuito fechado: Requisições chegam normalmente 
-      - Circuito fechado: Requisições não chegam ao sistema. Erro instantâneo ao client
-      - Circuito Meio aberto: Permite uma quantidade limitada de requisições para verificação se o sistema tem condições de voltar ao ar integralmente
-    - Podemos aplicar essa tática no nosso sitema, porém podemos aplicar essa estratégio na rede, usando por exemplo o Service Mesh
-  - API Gateway
-    - Garante que requisições "inapropriadas" cheguem atá o sistema:
-      - Usuário não autenticado
-    - Implementa políticas de Rate Limiting, Health Check...
-    - Transformar XLM em JSON, executar uma Lambda Function, trabalhar com logs...
+- Um sistema em uma arquitetura distribuída precisa adotar mecanismos de autopreservação para garantir ao máximo sua operação com qualidade
+- Um sistema não pode ser "egoísta" ao ponto de realizar mais requisições em um sistema que está falhando
+- Um sistema lento no ar muitas vezes é pior que um sistema fora do ar (Efeito dominó)
+
+- Health Check
+  - Sem sinais vitais, não é possível saber a "saúde" de um sistema
+  - Um sistema qua não está saudável possui uma chance de se recuperar caso o tráfego pare de ser direcionado a ele temporariamente
+  - Caso eu tenha ciência que o sistema não está "saudável", com base no health check, posso criar estratégias para evitar mandar requisições para aquele sistema, para que ele consiga ter um self healing 
+  - Health check de qualidade
+    - Retorna a média do tempo das últimas requisições
+    - Faz alguma consulta no banco
+
+- Rate Limiting
+  - Protege o sistema com base no que ele foi projetado para suportar
+    - Se o sistema aguenta 100 RPS, se passar desse valor ele irá retornar um status 500
+  - Referência programada por tipo de client
+    - Colocar um limite de RPS por cliente
+
+- Circuit Breaker
+  - Protege o sistema fazendo com que as requisições feitas para ele sejam negadas
+  - Status
+    - Circuito fechado: Requisições chegam normalmente 
+    - Circuito fechado: Requisições não chegam ao sistema. Erro instantâneo ao client
+    - Circuito Meio aberto: Permite uma quantidade limitada de requisições para verificação se o sistema tem condições de voltar ao ar integralmente
+  - Podemos aplicar essa tática no nosso sitema, porém podemos aplicar essa estratégio na rede, usando por exemplo o Service Mesh
+  
+- API Gateway
+  - Garante que requisições "inapropriadas" cheguem atá o sistema:
+    - Usuário não autenticado
+  - Implementa políticas de Rate Limiting, Health Check...
+  - Transformar XLM em JSON, executar uma Lambda Function, trabalhar com logs...
+  - Soluções populares
     - Kong 
 
+- Service Mesh
+  - Controla o tráfico de rede
+    - Toda requisição de rede é efetuada via proxy, assim tudo que passa pela rede pode ser controlado e metrificado
+  - Evita implementações de proteção pelo próprio sistema
+  - Criptografar a comunicação entre sistemas 
+    - mTLS
+  - Soluções populares
+    - Istio
