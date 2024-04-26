@@ -218,4 +218,11 @@ Resiliência é o conjunto de estratégias adotadas intencionalmente para a _ada
     - Health check de qualidade
       - Retorna a média do tempo das últimas requisições
       - Faz alguma consulta no banco
+  - Rate Limiting
+    - Protege o sistema com base no que ele foi projetado para suportar
+      - Se o sistema aguenta 100 RPS, se passar desse valor ele irá retornar um status 500
+    - Referência programada por tipo de client
+      - Colocar um limite de RPS por cliente
+
+
 
