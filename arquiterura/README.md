@@ -223,6 +223,12 @@ Resiliência é o conjunto de estratégias adotadas intencionalmente para a _ada
       - Se o sistema aguenta 100 RPS, se passar desse valor ele irá retornar um status 500
     - Referência programada por tipo de client
       - Colocar um limite de RPS por cliente
-
+  - Circuit Breaker
+    - Protege o sistema fazendo com que as requisições feitas para ele sejam negadas
+    - Status
+      - Circuito fechado: Requisições chegam normalmente 
+      - Circuito fechado: Requisições não chegam ao sistema. Erro instantâneo ao client
+      - Circuito Meio aberto: Permite uma quantidade limitada de requisições para verificação se o sistema tem condições de voltar ao ar integralmente
+    - Podemos aplicar essa tática no nosso sitema, porém podemos aplicar essa estratégio na rede, usando por exemplo o Service Mesh
 
 
