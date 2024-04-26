@@ -211,3 +211,11 @@ Resiliência é o conjunto de estratégias adotadas intencionalmente para a _ada
   - Um sistema em uma arquitetura distribuída precisa adotar mecanismos de autopreservação para garantir ao máximo sua operação com qualidade
   - Um sistema não pode ser "egoísta" ao ponto de realizar mais requisições em um sistema que está falhando
   - Um sistema lento no ar muitas vezes é pior que um sistema fora do ar (Efeito dominó)
+  - Health Check
+    - Sem sinais vitais, não é possível saber a "saúde" de um sistema
+    - Um sistema qua não está saudável possui uma chance de se recuperar caso o tráfego pare de ser direcionado a ele temporariamente
+    - Caso eu tenha ciência que o sistema não está "saudável", com base no health check, posso criar estratégias para evitar mandar requisições para aquele sistema, para que ele consiga ter um self healing 
+    - Health check de qualidade
+      - Retorna a média do tempo das últimas requisições
+      - Faz alguma consulta no banco
+
