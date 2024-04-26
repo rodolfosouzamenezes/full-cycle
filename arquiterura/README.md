@@ -258,3 +258,17 @@ Resiliência é o conjunto de estratégias adotadas intencionalmente para a _ada
   - Entender com profundidade o message broker / sistema de stream
   - Soluções populares
     - Kafka
+
+- Retry
+  - Garantias de entrega
+    - se mandar uma mensagem e o sistema não respondeu, ele vai tentar novamente
+  - Possíveis estratégias
+    - Linear - Sem backoff
+      - Não adianta fazer um retry de forma linear (de 2 em 2 segundos tentar novamente), pois provávelmente outros sistemas estão fazendo a mesma coisa, então você não terá exito
+    - Exponencial backoff
+      - Deixa o sistema respirar um pouco
+      - Vou fazer o retry de maneira exponencial, de 2s, 4s, 8s, 16s...
+      - Mas também corre o risco de estar competindo com outros sistemas que estão usando essa estratégia
+    - Exponencial backoff - Jitter
+      - Adiciona um "ruído" para determinar o tempo de retry, com base algoritmos, em  assim diminuindo a quantidade de requisições simultâneas 
+      - Retry em 2s, 4.3s, 8.6s, 16.9s...
