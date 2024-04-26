@@ -230,5 +230,10 @@ Resiliência é o conjunto de estratégias adotadas intencionalmente para a _ada
       - Circuito fechado: Requisições não chegam ao sistema. Erro instantâneo ao client
       - Circuito Meio aberto: Permite uma quantidade limitada de requisições para verificação se o sistema tem condições de voltar ao ar integralmente
     - Podemos aplicar essa tática no nosso sitema, porém podemos aplicar essa estratégio na rede, usando por exemplo o Service Mesh
-
+  - API Gateway
+    - Garante que requisições "inapropriadas" cheguem atá o sistema:
+      - Usuário não autenticado
+    - Implementa políticas de Rate Limiting, Health Check...
+    - Transformar XLM em JSON, executar uma Lambda Function, trabalhar com logs...
+    - Kong 
 
