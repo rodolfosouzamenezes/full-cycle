@@ -233,7 +233,7 @@ Resiliência é o conjunto de estratégias adotadas intencionalmente para a _ada
     - Circuito fechado: Requisições não chegam ao sistema. Erro instantâneo ao client
     - Circuito Meio aberto: Permite uma quantidade limitada de requisições para verificação se o sistema tem condições de voltar ao ar integralmente
   - Podemos aplicar essa tática no nosso sitema, porém podemos aplicar essa estratégio na rede, usando por exemplo o Service Mesh
-  
+
 - API Gateway
   - Garante que requisições "inapropriadas" cheguem atá o sistema:
     - Usuário não autenticado
@@ -250,3 +250,11 @@ Resiliência é o conjunto de estratégias adotadas intencionalmente para a _ada
     - mTLS
   - Soluções populares
     - Istio
+
+- Trabalhar de forma assíncrona
+  - Evita perda de dados
+  - Não há perca de dados no envio de uma transação se o server estiver fora
+    - Servidor pode processar a transação quando estiver online novamente
+  - Entender com profundidade o message broker / sistema de stream
+  - Soluções populares
+    - Kafka
