@@ -259,16 +259,23 @@ Resiliência é o conjunto de estratégias adotadas intencionalmente para a _ada
   - Soluções populares
     - Kafka
 
-- Retry
-  - Garantias de entrega
+- Garantias de entrega
+  - Retry
     - se mandar uma mensagem e o sistema não respondeu, ele vai tentar novamente
-  - Possíveis estratégias
-    - Linear - Sem backoff
-      - Não adianta fazer um retry de forma linear (de 2 em 2 segundos tentar novamente), pois provávelmente outros sistemas estão fazendo a mesma coisa, então você não terá exito
-    - Exponencial backoff
-      - Deixa o sistema respirar um pouco
-      - Vou fazer o retry de maneira exponencial, de 2s, 4s, 8s, 16s...
-      - Mas também corre o risco de estar competindo com outros sistemas que estão usando essa estratégia
-    - Exponencial backoff - Jitter
-      - Adiciona um "ruído" para determinar o tempo de retry, com base algoritmos, em  assim diminuindo a quantidade de requisições simultâneas 
-      - Retry em 2s, 4.3s, 8.6s, 16.9s...
+    - Possíveis estratégias
+      - Linear - Sem backoff
+        - Não adianta fazer um retry de forma linear (de 2 em 2 segundos tentar novamente), pois provávelmente outros sistemas estão fazendo a mesma coisa, então você não terá exito
+      - Exponencial backoff
+        - Deixa o sistema respirar um pouco
+        - Vou fazer o retry de maneira exponencial, de 2s, 4s, 8s, 16s...
+        - Mas também corre o risco de estar competindo com outros sistemas que estão usando essa estratégia
+      - Exponencial backoff - Jitter
+        - Adiciona um "ruído" para determinar o tempo de retry, com base algoritmos, em  assim diminuindo a quantidade de requisições simultâneas 
+        - Retry em 2s, 4.3s, 8.6s, 16.9s...
+  - Kafka <br>
+    - Armazenará uma mensagem para que outro sistema possa acessá-la posteriormente
+    - A mensagem será enviada a o Broker Leader, e replicada para os outros Brokers do mesmo Cluster (Conjuntos de Brokers)
+    - Ack 0 ou "Fire and Forget": Em certos casos, a confirmação de entrega não é crucial. Então o sistema só precisa receber a mensagem, sem a necessidade de enviar uma confirmação de que a mensagem foi entregue, resultando em uma maior velocidade
+    - Ack -1 ou "Ack All": Em situações onde a confirmação de entrega é vital, o processo é mais elaborado. Antes de enviar a confirmação, a mensagem é replicada em todos os Brokers do Cluster. Estes, por sua vez, confirmam ao Broker Leader que receberam a mensagem. Somente após essa confirmação, o Broker Leader envia a confirmação de entrega
+
+    - ![](assets/kafka.png)
